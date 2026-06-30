@@ -54,7 +54,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <h1>📄 ระบบจัดการใบกำกับภาษี KBank</h1>
-    <p>v3.0 (เว็บแอป) — อ่าน PDF ใบกำกับภาษี กรอกลง Excel อัตโนมัติ + ปลดรหัสผ่าน PDF</p>
+    <p>v3.0 (เว็ปแอพลิเคชั่น) — ระบบอ่าน PDF ใบกำกับภาษี กรอกลง Excel อัตโนมัติ และการปลดรหัสผ่าน PDF</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -143,7 +143,7 @@ with tab1:
                     # ปุ่มดาวน์โหลด Excel ที่อัปเดตแล้ว
                     updated_bytes = excel_path.read_bytes()
                     st.download_button(
-                        label="⬇️  ดาวน์โหลดไฟล์ Excel ที่อัปเดตแล้ว",
+                        label="⬇️ ดาวน์โหลดไฟล์ Excel ที่อัปเดตแล้ว",
                         data=updated_bytes,
                         file_name=excel_file.name,
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -153,7 +153,7 @@ with tab1:
                     # ปุ่มดาวน์โหลด backup (เผื่ออยากเก็บ)
                     backup_bytes = result["backup_path"].read_bytes()
                     st.download_button(
-                        label="🗄️  ดาวน์โหลดไฟล์ Excel ต้นฉบับ (ก่อนแก้ไข / backup)",
+                        label="🗄️ ดาวน์โหลดไฟล์ Excel ต้นฉบับ (ก่อนแก้ไข / backup)",
                         data=backup_bytes,
                         file_name=result["backup_path"].name,
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -270,4 +270,4 @@ with tab2:
 
 # ───────────────────────── Footer ─────────────────────────
 st.markdown("---")
-st.caption("ระบบจัดการใบกำกับภาษี KBank For SPSE")
+st.caption("ระบบจัดการใบกำกับภาษี")
